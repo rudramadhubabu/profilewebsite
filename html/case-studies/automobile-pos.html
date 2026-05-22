@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Automobile POS - Case Study | DARLA</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <style>
+    body { background: white; color: #1d1d1f; }
+    .case-progress { position: fixed; top: 0; left: 0; height: 4px; background: #dc2626; z-index: 50; width: 0%; }
+    .case-back-btn { position: fixed; top: 1rem; left: 1rem; z-index: 50; display: flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; background: white; border: 2px solid rgba(0,0,0,0.2); border-radius: 9999px; text-decoration: none; color: black; font-weight: 500; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: all 0.3s ease; }
+    .case-back-btn:hover { border-color: rgba(0,0,0,0.4); box-shadow: 0 15px 40px rgba(0,0,0,0.15); }
+    .case-hero { position: relative; height: 100vh; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+    .case-hero-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+    .case-hero-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.5), transparent); }
+    .case-hero-content { position: relative; z-index: 10; max-width: 1280px; margin: 0 auto; padding: 0 1.5rem; color: white; text-align: center; }
+    .case-badge { display: inline-block; padding: 0.5rem 1rem; border-radius: 9999px; background: rgba(220,38,38,0.1); border: 1px solid rgba(220,38,38,0.3); color: #dc2626; font-size: 0.875rem; margin-bottom: 1.5rem; }
+    .case-title { font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 700; letter-spacing: -0.02em; margin-bottom: 1.5rem; }
+    .case-subtitle { font-size: clamp(1.125rem, 2vw, 1.5rem); color: rgba(255,255,255,0.9); max-width: 48rem; margin: 0 auto; }
+    .case-section { padding: 6rem 1.5rem; max-width: 1280px; margin: 0 auto; }
+    .case-section-alt { background: #f5f5f7; }
+    h2 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; margin-bottom: 1.5rem; }
+    h3 { font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 600; margin-bottom: 1rem; }
+    .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem; }
+    .card { padding: 2rem; border-radius: 1rem; background: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+    .card-alt { background: #f5f5f7; }
+  </style>
+</head>
+<body>
+  <div class="case-progress"></div>
+  
+  <a href="../index.html#work" class="case-back-btn">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <line x1="19" y1="12" x2="5" y2="12"></line>
+      <polyline points="12 19 5 12 12 5"></polyline>
+    </svg>
+    <span>Back to Portfolio</span>
+  </a>
+
+  <section class="case-hero">
+    <img src="https://images.unsplash.com/photo-1770319942638-a5989632f2ad?w=1920&q=80" alt="Automobile dealership" class="case-hero-img">
+    <div class="case-hero-overlay"></div>
+    <div class="case-hero-content">
+      <div class="case-badge">Web Application</div>
+      <h1 class="case-title">Automobile Point of Sale System</h1>
+      <p class="case-subtitle">Streamlining dealership operations with an intuitive, comprehensive POS solution</p>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <h2>Project Overview</h2>
+    <p style="font-size: 1.125rem; line-height: 1.8; color: #4b5563; margin-top: 1rem;">
+      A comprehensive Point of Sale (POS) system designed for automobile dealerships to streamline vehicle sales, customer management, documentation, and payment processing.
+    </p>
+    <div class="grid-2">
+      <div class="card">
+        <h3>Role</h3>
+        <p>Lead Product Designer</p>
+      </div>
+      <div class="card">
+        <h3>Timeline</h3>
+        <p>6 months (2024-2025)</p>
+      </div>
+      <div class="card">
+        <h3>Platform</h3>
+        <p>Web Application</p>
+      </div>
+      <div class="card">
+        <h3>Team</h3>
+        <p>3 Designers, 8 Engineers</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section case-section-alt">
+    <h2>The Problem</h2>
+    <p style="font-size: 1.125rem; line-height: 1.8; color: #4b5563; margin-top: 1rem;">
+      Automobile dealerships were struggling with fragmented systems for sales, documentation, and customer management, leading to inefficiencies, errors, and poor customer experiences.
+    </p>
+    <div class="grid-2" style="margin-top: 2rem;">
+      <div class="card">
+        <h3>Challenge 1: Fragmented Workflows</h3>
+        <p>Dealership staff had to use multiple disconnected systems for different tasks, causing delays and errors.</p>
+      </div>
+      <div class="card">
+        <h3>Challenge 2: Complex Documentation</h3>
+        <p>Vehicle sales require extensive paperwork, making the process time-consuming and error-prone.</p>
+      </div>
+      <div class="card">
+        <h3>Challenge 3: Payment Processing</h3>
+        <p>Managing multiple payment methods and financing options was cumbersome.</p>
+      </div>
+      <div class="card">
+        <h3>Challenge 4: Customer Management</h3>
+        <p>Tracking customer interactions and maintaining relationships was difficult without a centralized system.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <h2>User Research</h2>
+    <p style="font-size: 1.125rem; line-height: 1.8; color: #4b5563; margin-top: 1rem;">
+      We conducted extensive research with dealership sales staff, managers, and customers to understand their pain points and needs.
+    </p>
+    <div class="grid-2" style="margin-top: 2rem;">
+      <div class="card card-alt">
+        <h3>Research Methods</h3>
+        <ul style="margin-top: 1rem; padding-left: 1.5rem; line-height: 1.8;">
+          <li>15 in-depth interviews with sales staff</li>
+          <li>5 contextual inquiries at dealerships</li>
+          <li>Survey of 100+ dealership employees</li>
+          <li>Competitive analysis of 8 POS systems</li>
+        </ul>
+      </div>
+      <div class="card card-alt">
+        <h3>Key Insights</h3>
+        <ul style="margin-top: 1rem; padding-left: 1.5rem; line-height: 1.8;">
+          <li>85% of staff wanted a unified system</li>
+          <li>Average sale took 3-4 hours due to manual processes</li>
+          <li>Documentation errors occurred in 30% of transactions</li>
+          <li>Customers wanted faster, transparent processes</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section case-section-alt">
+    <h2>User Personas</h2>
+    <div class="grid-2" style="margin-top: 2rem;">
+      <div class="card">
+        <h3>Sarah - Sales Representative</h3>
+        <p style="margin-top: 0.5rem;"><strong>Age:</strong> 32 | <strong>Experience:</strong> 5 years</p>
+        <p style="margin-top: 1rem; line-height: 1.8;"><strong>Goals:</strong> Close sales quickly, provide excellent customer service, minimize paperwork</p>
+        <p style="margin-top: 0.5rem; line-height: 1.8;"><strong>Pain Points:</strong> Too many systems to learn, slow documentation process, difficulty tracking customer history</p>
+      </div>
+      <div class="card">
+        <h3>Mike - Dealership Manager</h3>
+        <p style="margin-top: 0.5rem;"><strong>Age:</strong> 45 | <strong>Experience:</strong> 15 years</p>
+        <p style="margin-top: 1rem; line-height: 1.8;"><strong>Goals:</strong> Increase sales efficiency, reduce errors, monitor team performance, ensure compliance</p>
+        <p style="margin-top: 0.5rem; line-height: 1.8;"><strong>Pain Points:</strong> Lack of real-time visibility, training new staff is difficult, compliance concerns</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <h2>Information Architecture</h2>
+    <p style="font-size: 1.125rem; line-height: 1.8; color: #4b5563; margin-top: 1rem;">
+      We designed a clear, intuitive information architecture that organizes all dealership operations into logical modules.
+    </p>
+    <div style="margin-top: 2rem; padding: 2rem; background: #f5f5f7; border-radius: 1rem;">
+      <h3>Main Modules:</h3>
+      <ul style="margin-top: 1rem; padding-left: 1.5rem; line-height: 2;">
+        <li><strong>Dashboard:</strong> Overview of sales, inventory, and performance metrics</li>
+        <li><strong>Vehicle Management:</strong> Inventory tracking, pricing, specifications</li>
+        <li><strong>Customer Management:</strong> CRM, contact history, preferences</li>
+        <li><strong>Sales Process:</strong> Quote generation, test drives, negotiation</li>
+        <li><strong>Documentation:</strong> Automated form generation, digital signatures</li>
+        <li><strong>Payment Processing:</strong> Multiple payment methods, financing integration</li>
+        <li><strong>Reporting:</strong> Sales analytics, performance tracking</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="case-section case-section-alt">
+    <h2>Design System</h2>
+    <p style="font-size: 1.125rem; line-height: 1.8; color: #4b5563; margin-top: 1rem;">
+      We created a comprehensive design system to ensure consistency and efficiency across the application.
+    </p>
+    <div class="grid-2" style="margin-top: 2rem;">
+      <div class="card">
+        <h3>Color Palette</h3>
+        <div style="display: flex; gap: 1rem; margin-top: 1rem; flex-wrap: wrap;">
+          <div style="width: 60px; height: 60px; background: #dc2626; border-radius: 0.5rem;"></div>
+          <div style="width: 60px; height: 60px; background: #1d1d1f; border-radius: 0.5rem;"></div>
+          <div style="width: 60px; height: 60px; background: #f5f5f7; border: 1px solid #ddd; border-radius: 0.5rem;"></div>
+          <div style="width: 60px; height: 60px; background: #4b5563; border-radius: 0.5rem;"></div>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Typography</h3>
+        <p style="margin-top: 1rem;"><strong>Headlines:</strong> SF Pro Display, Bold</p>
+        <p style="margin-top: 0.5rem;"><strong>Body:</strong> SF Pro Text, Regular</p>
+        <p style="margin-top: 0.5rem;"><strong>Mono:</strong> SF Mono, for data</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <h2>Key Features</h2>
+    <div class="grid-2" style="margin-top: 2rem;">
+      <div class="card card-alt">
+        <h3>Unified Dashboard</h3>
+        <p style="margin-top: 1rem; line-height: 1.8;">A comprehensive overview showing real-time sales, inventory levels, and performance metrics at a glance.</p>
+      </div>
+      <div class="card card-alt">
+        <h3>Smart Vehicle Search</h3>
+        <p style="margin-top: 1rem; line-height: 1.8;">Advanced filtering and search capabilities to quickly find the perfect vehicle for each customer.</p>
+      </div>
+      <div class="card card-alt">
+        <h3>Automated Documentation</h3>
+        <p style="margin-top: 1rem; line-height: 1.8;">Generate all required forms automatically, with digital signature support and compliance checking.</p>
+      </div>
+      <div class="card card-alt">
+        <h3>Integrated Payments</h3>
+        <p style="margin-top: 1rem; line-height: 1.8;">Process payments, manage financing options, and track transactions seamlessly.</p>
+      </div>
+      <div class="card card-alt">
+        <h3>Customer Portal</h3>
+        <p style="margin-top: 1rem; line-height: 1.8;">Allow customers to track their purchase, upload documents, and communicate with the dealership.</p>
+      </div>
+      <div class="card card-alt">
+        <h3>Mobile Responsive</h3>
+        <p style="margin-top: 1rem; line-height: 1.8;">Full functionality on tablets and mobile devices for on-the-lot sales.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section case-section-alt">
+    <h2>Usability Testing</h2>
+    <p style="font-size: 1.125rem; line-height: 1.8; color: #4b5563; margin-top: 1rem;">
+      We conducted multiple rounds of usability testing to refine the design and ensure it met user needs.
+    </p>
+    <div class="grid-2" style="margin-top: 2rem;">
+      <div class="card">
+        <h3>Testing Approach</h3>
+        <ul style="margin-top: 1rem; padding-left: 1.5rem; line-height: 1.8;">
+          <li>3 rounds of testing with 20 participants</li>
+          <li>Task-based scenarios covering key workflows</li>
+          <li>A/B testing for critical interfaces</li>
+          <li>Think-aloud protocol to understand user thinking</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Key Improvements</h3>
+        <ul style="margin-top: 1rem; padding-left: 1.5rem; line-height: 1.8;">
+          <li>Simplified navigation reduced task time by 40%</li>
+          <li>Added contextual help for complex features</li>
+          <li>Improved form validation messaging</li>
+          <li>Enhanced mobile touch targets</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <h2>Impact & Results</h2>
+    <div class="grid-2" style="margin-top: 2rem;">
+      <div class="card" style="text-align: center; padding: 3rem 2rem;">
+        <div style="font-size: 3rem; font-weight: 700; color: #dc2626;">60%</div>
+        <p style="margin-top: 0.5rem; font-size: 1.125rem;">Reduction in Sale Time</p>
+      </div>
+      <div class="card" style="text-align: center; padding: 3rem 2rem;">
+        <div style="font-size: 3rem; font-weight: 700; color: #dc2626;">85%</div>
+        <p style="margin-top: 0.5rem; font-size: 1.125rem;">Staff Satisfaction</p>
+      </div>
+      <div class="card" style="text-align: center; padding: 3rem 2rem;">
+        <div style="font-size: 3rem; font-weight: 700; color: #dc2626;">95%</div>
+        <p style="margin-top: 0.5rem; font-size: 1.125rem;">Error Reduction</p>
+      </div>
+      <div class="card" style="text-align: center; padding: 3rem 2rem;">
+        <div style="font-size: 3rem; font-weight: 700; color: #dc2626;">$2M+</div>
+        <p style="margin-top: 0.5rem; font-size: 1.125rem;">Cost Savings Annually</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section case-section-alt">
+    <h2>Key Learnings</h2>
+    <div class="card" style="max-width: 800px; margin: 2rem auto; padding: 2.5rem;">
+      <ul style="padding-left: 1.5rem; line-height: 2; font-size: 1.125rem;">
+        <li>Involving users early and often was critical to success</li>
+        <li>Simplifying complex processes requires deep domain knowledge</li>
+        <li>Mobile-first thinking improved the overall design</li>
+        <li>Compliance and legal requirements must be baked into the design</li>
+        <li>Training and onboarding are as important as the UI itself</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer style="padding: 3rem 1.5rem; border-top: 1px solid #e5e7eb; text-align: center;">
+    <a href="../index.html" style="display: inline-block; padding: 1rem 2rem; background: #1d1d1f; color: white; border-radius: 9999px; text-decoration: none; font-weight: 600; transition: transform 0.3s ease;">
+      View More Projects
+    </a>
+    <p style="margin-top: 2rem; color: #6b7280;">© 2026 DARLA. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Progress bar
+    window.addEventListener('scroll', () => {
+      const progress = document.querySelector('.case-progress');
+      const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (window.scrollY / windowHeight) * 100;
+      progress.style.width = scrolled + '%';
+    });
+  </script>
+</body>
+</html>

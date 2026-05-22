@@ -1,0 +1,321 @@
+Act as a senior enterprise product designer creating a complete high-fidelity UI prototype for a retail financial voucher management system.
+
+The system is used by store employees to record incoming payments related to building damage incidents.
+
+The UI should modernize the legacy voucher interface while preserving the same visual identity.
+
+Design must follow these characteristics:
+
+Dark application background
+Centered white card layout
+Minimal enterprise interface
+Red accent actions
+Compact input controls
+Balanced whitespace
+Clean typography
+
+Avoid oversized buttons or oversized UI elements.
+
+---
+
+GLOBAL DESIGN SYSTEM
+
+Background
+Dark charcoal #1F1F1F
+
+Surface
+White card container
+
+Accent
+Red #E3262E
+
+Typography
+Inter / SF Pro
+
+Input height
+40px
+
+Button height
+40px
+
+Border radius
+8px
+
+Card radius
+12px
+
+Card shadow
+Soft elevation
+
+---
+
+SCREEN 1
+BUILDING DAMAGE FORM — DEFAULT STATE
+
+Top navigation bar
+
+Left
+Vouchers
+
+Right
+User name
+Exit link
+
+Breadcrumb
+
+Pay In > Building Damage
+
+Centered white form card.
+
+SECTION
+
+Customer Details
+
+Fields
+
+First Name
+Last Name
+Company Name
+Phone Number
+
+Second row
+
+Date of Incident
+Repairs Completed? (Dropdown)
+
+Third row
+
+Amount Received
+
+Fourth row
+
+Comments textarea
+
+Comments field
+
+Character limit
+256 characters
+
+Bottom actions
+
+Cancel (outlined)
+Submit (red primary)
+
+---
+
+SCREEN 2
+VALIDATION ERRORS
+
+If user submits empty form.
+
+Show validation errors:
+
+Please enter first name
+Please enter last name
+Please enter phone number
+Please enter date of incident
+Please select repairs completed
+Please enter amount received
+
+Error design
+
+Orange highlight
+Warning icon
+Error text below field
+
+---
+
+SCREEN 3
+REPAIRS COMPLETED DROPDOWN
+
+Dropdown options
+
+Yes
+No
+
+Dropdown expands below field.
+
+---
+
+SCREEN 4
+REPAIRS COMPLETED = NO
+
+Form remains simple.
+
+Fields visible
+
+Customer Details
+Date of Incident
+Amount Received
+Comments
+
+No repair fields displayed.
+
+---
+
+SCREEN 5
+REPAIRS COMPLETED = YES
+
+Additional fields appear.
+
+Repairs Completed Date
+Repairs Completed By (Dropdown)
+
+---
+
+SCREEN 6
+REPAIRS COMPLETED BY DROPDOWN
+
+Options
+
+Vendor
+Facilities
+
+---
+
+SCREEN 7
+REPAIRS COMPLETED BY = VENDOR
+
+Additional field appears
+
+Vendor Name
+
+Text input field.
+
+---
+
+SCREEN 8
+VENDOR NAME VALIDATION
+
+If Vendor selected but name empty.
+
+Error message
+
+Please enter vendor name
+
+---
+
+SCREEN 9
+AMOUNT VALIDATION
+
+If amount entered = $0.00
+
+Show error
+
+Please enter valid amount
+
+Highlight field.
+
+---
+
+SCREEN 10
+FORM FILLED SUCCESSFULLY
+
+Example values
+
+First Name
+Esther
+
+Last Name
+Howard
+
+Phone
+551-555-1234
+
+Date of Incident
+04/24/2020
+
+Repairs Completed
+Yes
+
+Repairs Completed Date
+05/24/2020
+
+Repairs Completed By
+Vendor
+
+Vendor Name
+Jon Co
+
+Amount Received
+$50.00
+
+Comments
+Optional notes
+
+---
+
+SCREEN 11
+EXIT CONFIRMATION MODAL
+
+If user presses Exit.
+
+Modal appears.
+
+Message
+
+Are you sure you want to clear all saved data?
+Any changes made will be lost.
+
+Buttons
+
+No, Return to Pay In
+Yes, Exit
+
+Background blurred.
+
+---
+
+SCREEN 12
+SUBMIT SUCCESS FLOW
+
+User submits completed form.
+
+Submit button loading state.
+
+Voucher saved confirmation.
+
+---
+
+INTERACTION DESIGN
+
+Dropdown animation
+120ms ease
+
+Button hover
+Subtle elevation
+
+Error transition
+Smooth border highlight
+
+Modal animation
+Fade + scale
+
+---
+
+PROTOTYPE FLOW
+
+Pay In Category
+→ Building Damage Form
+→ Repairs Completed Selection
+→ Conditional Fields
+→ Form Validation
+→ Submit
+→ Exit confirmation flow
+
+---
+
+LAYOUT PRINCIPLES
+
+Centered card layout
+Minimal UI
+Enterprise system design
+Balanced whitespace
+
+---
+
+PROTOTYPE OUTPUT
+
+Generate all screens and connect them with clickable interactions.
+
+Prototype must be usable in Figma prototype mode.

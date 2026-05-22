@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Industrial Safety Ecosystem - Case Study | DARLA</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <style>
+    .dark { --background: #0A0A0A; --foreground: #f5f5f7; }
+    body { background: var(--background); color: var(--foreground); }
+    .case-progress { position: fixed; top: 0; left: 0; height: 4px; background: linear-gradient(to right, #f97316, #dc2626, #f97316); z-index: 50; width: 0%; }
+    .case-back-btn { position: fixed; top: 1rem; left: 1rem; z-index: 50; display: flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; background: rgba(18,18,18,0.9); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.1); border-radius: 9999px; text-decoration: none; color: #f5f5f7; font-weight: 500; }
+    .case-hero { position: relative; height: 100vh; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+    .case-hero-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+    .case-hero-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.5), transparent); }
+    .case-section { padding: 6rem 1.5rem; max-width: 1280px; margin: 0 auto; }
+    .case-section-alt { background: rgba(18, 18, 18, 0.5); }
+    h2 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; margin-bottom: 1.5rem; }
+    h3 { font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 600; margin-bottom: 1rem; }
+    .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem; }
+    .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 2rem; }
+    .card { padding: 2rem; border-radius: 1rem; background: rgba(18, 18, 18, 0.8); box-shadow: 0 4px 6px rgba(0,0,0,0.3); }
+  </style>
+</head>
+<body class="dark">
+  <div class="case-progress"></div>
+  
+  <a href="../index.html#work" class="case-back-btn">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <line x1="19" y1="12" x2="5" y2="12"></line>
+      <polyline points="12 19 5 12 12 5"></polyline>
+    </svg>
+    <span>Back to Portfolio</span>
+  </a>
+
+  <section class="case-hero">
+    <img src="https://images.unsplash.com/photo-1768268004429-e59aeea1b932?w=1920&q=80" alt="Industrial safety equipment" class="case-hero-img">
+    <div class="case-hero-overlay"></div>
+    <div style="position: relative; z-index: 10; max-width: 1280px; margin: 0 auto; padding: 0 1.5rem; color: white; text-align: center;">
+      <div style="display: inline-block; padding: 0.5rem 1rem; border-radius: 9999px; background: rgba(249,115,22,0.1); border: 1px solid rgba(249,115,22,0.3); color: #f97316; font-size: 0.875rem; margin-bottom: 1.5rem;">Multi-Brand B2B Platform</div>
+      <h1 style="font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 700; letter-spacing: -0.02em; margin-bottom: 1.5rem;">Justrite Safety Group: Multi-Brand Ecommerce Redesign</h1>
+      <p style="font-size: clamp(1.125rem, 2vw, 1.5rem); max-width: 48rem; margin: 0 auto;">Unifying 6 industrial safety brands under one cohesive B2B ecommerce ecosystem</p>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <h2>Project Overview</h2>
+    <p style="font-size: 1.125rem; line-height: 1.8; color: rgba(245,245,247,0.7); margin-top: 1rem;">
+      A comprehensive UX redesign of the Justrite Safety Group's multi-brand ecommerce platform, featuring 6 distinct safety equipment brands: Justrite, Eagle, Checkers, NoTrax, and specialized divisions for hazardous storage, spill control, and workplace safety.
+    </p>
+    <div class="grid-2">
+      <div class="card">
+        <h3>Company</h3>
+        <p style="color: rgba(245,245,247,0.7);">Justrite Safety Group - Global leader in industrial safety solutions</p>
+      </div>
+      <div class="card">
+        <h3>Scope</h3>
+        <p style="color: rgba(245,245,247,0.7);">6 brand websites + unified mega-menu system</p>
+      </div>
+      <div class="card">
+        <h3>Role</h3>
+        <p style="color: rgba(245,245,247,0.7);">Lead UX/UI Designer</p>
+      </div>
+      <div class="card">
+        <h3>Timeline</h3>
+        <p style="color: rgba(245,245,247,0.7);">18 months (2024-2025)</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section case-section-alt">
+    <h2>The Challenge</h2>
+    <p style="font-size: 1.125rem; line-height: 1.8; color: rgba(245,245,247,0.7); margin-top: 1rem;">
+      Justrite Safety Group had acquired multiple safety equipment brands over the years, each with its own website and navigation structure, creating a fragmented and confusing customer experience.
+    </p>
+    <div class="grid-2" style="margin-top: 2rem;">
+      <div class="card">
+        <h3>Fragmented Experience</h3>
+        <p style="color: rgba(245,245,247,0.7); line-height: 1.8;">Customers struggled to navigate between brands and find products across the portfolio.</p>
+      </div>
+      <div class="card">
+        <h3>Inconsistent Design</h3>
+        <p style="color: rgba(245,245,247,0.7); line-height: 1.8;">Each brand had different navigation, terminology, and user flows.</p>
+      </div>
+      <div class="card">
+        <h3>Poor Product Discovery</h3>
+        <p style="color: rgba(245,245,247,0.7); line-height: 1.8;">Complex product categories made it difficult for B2B buyers to find the right safety solutions.</p>
+      </div>
+      <div class="card">
+        <h3>Cross-Brand Shopping</h3>
+        <p style="color: rgba(245,245,247,0.7); line-height: 1.8;">Customers often needed products from multiple brands but couldn't shop across brands easily.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <h2>The 6 Brands</h2>
+    <div class="grid-3" style="margin-top: 2rem;">
+      <div class="card">
+        <h3>🏭 Hazardous Storage</h3>
+        <p style="color: rgba(245,245,247,0.7); line-height: 1.8;">Safety cabinets, flammable storage, containment solutions</p>
+      </div>
+      <div class="card">
+        <h3>💧 Spill Control</h3>
+        <p style="color: rgba(245,245,247,0.7); line-height: 1.8;">Spill kits, containment pallets, absorbent materials</p>
+      </div>
+      <div class="card">
+        <h3>⚠️ Motion Safety (Checkers)</h3>
+        <p style="color: rgba(245,245,247,0.7); line-height: 1.8;">Traffic safety, cable protectors, warning systems</p>
+      </div>
+      <div class="card">
+        <h3>🦺 Workplace Ergonomics (NoTrax)</h3>
+        <p style="color: rgba(245,245,247,0.7); line-height: 1.8;">Anti-fatigue mats, entrance systems, safety flooring</p>
+      </div>
+      <div class="card">
+        <h3>🏗️ Industries</h3>
+        <p style="color: rgba(245,245,247,0.7); line-height: 1.8;">Industry-specific safety solutions and compliance</p>
+      </div>
+      <div class="card">
+        <h3>📚 Safety Resources</h3>
+        <p style="color: rgba(245,245,247,0.7); line-height: 1.8;">Training, compliance guides, safety best practices</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section case-section-alt">
+    <h2>Research & Discovery</h2>
+    <div class="grid-2" style="margin-top: 2rem;">
+      <div class="card">
+        <h3>Research Activities</h3>
+        <ul style="margin-top: 1rem; padding-left: 1.5rem; line-height: 1.8; color: rgba(245,245,247,0.7);">
+          <li>30+ interviews with B2B customers</li>
+          <li>Analytics review across all 6 brands</li>
+          <li>Competitive analysis of industrial sites</li>
+          <li>Information architecture audit</li>
+          <li>User journey mapping</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Key Insights</h3>
+        <ul style="margin-top: 1rem; padding-left: 1.5rem; line-height: 1.8; color: rgba(245,245,247,0.7);">
+          <li>65% of customers bought from 2+ brands</li>
+          <li>Navigation was cited as #1 pain point</li>
+          <li>Buyers wanted industry-specific views</li>
+          <li>Mobile usage was growing rapidly</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <h2>Solution: Unified Mega-Menu System</h2>
+    <p style="font-size: 1.125rem; line-height: 1.8; color: rgba(245,245,247,0.7); margin-top: 1rem;">
+      We designed a revolutionary mega-menu system that provides brand-specific navigation while maintaining a consistent structure across all 6 brands.
+    </p>
+    <div class="grid-2" style="margin-top: 2rem;">
+      <div class="card">
+        <h3>4-Column Layout</h3>
+        <p style="color: rgba(245,245,247,0.7); line-height: 1.8;">Consistent mega-menu structure: Featured Products | Shop by Category | By Industry | Resources</p>
+      </div>
+      <div class="card">
+        <h3>Brand-Specific Content</h3>
+        <p style="color: rgba(245,245,247,0.7); line-height: 1.8;">Each brand's menu is customized with relevant products, categories, and resources.</p>
+      </div>
+      <div class="card">
+        <h3>Visual Hierarchy</h3>
+        <p style="color: rgba(245,245,247,0.7); line-height: 1.8;">Hero images, icons, and clear typography guide users to the right products.</p>
+      </div>
+      <div class="card">
+        <h3>Cross-Brand Navigation</h3>
+        <p style="color: rgba(245,245,247,0.7); line-height: 1.8;">Easy access to other brands and unified shopping cart.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section case-section-alt">
+    <h2>Design System</h2>
+    <p style="font-size: 1.125rem; line-height: 1.8; color: rgba(245,245,247,0.7); margin-top: 1rem;">
+      Created a comprehensive design system that balances brand individuality with system-wide consistency.
+    </p>
+    <div class="grid-2" style="margin-top: 2rem;">
+      <div class="card">
+        <h3>Shared Components</h3>
+        <ul style="margin-top: 1rem; padding-left: 1.5rem; line-height: 1.8; color: rgba(245,245,247,0.7);">
+          <li>Mega-menu structure (4-column grid)</li>
+          <li>Product cards and filters</li>
+          <li>Search interface</li>
+          <li>Shopping cart and checkout</li>
+          <li>Typography and spacing system</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Brand Customization</h3>
+        <ul style="margin-top: 1rem; padding-left: 1.5rem; line-height: 1.8; color: rgba(245,245,247,0.7);">
+          <li>Brand colors and logos</li>
+          <li>Hero imagery and icons</li>
+          <li>Product category organization</li>
+          <li>Industry-specific content</li>
+          <li>Brand voice and messaging</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <h2>Key Features Designed</h2>
+    <div class="grid-2" style="margin-top: 2rem;">
+      <div class="card">
+        <h3>🎯 Smart Product Discovery</h3>
+        <p style="margin-top: 1rem; line-height: 1.8; color: rgba(245,245,247,0.7);">Advanced filtering by compliance, industry, material, size, and more.</p>
+      </div>
+      <div class="card">
+        <h3>🏢 Industry-Specific Views</h3>
+        <p style="margin-top: 1rem; line-height: 1.8; color: rgba(245,245,247,0.7);">Tailored product recommendations for manufacturing, chemical, oil & gas, etc.</p>
+      </div>
+      <div class="card">
+        <h3>🛒 Unified Shopping Cart</h3>
+        <p style="margin-top: 1rem; line-height: 1.8; color: rgba(245,245,247,0.7);">Shop across all 6 brands with a single cart and checkout.</p>
+      </div>
+      <div class="card">
+        <h3>📱 Mobile-First Design</h3>
+        <p style="margin-top: 1rem; line-height: 1.8; color: rgba(245,245,247,0.7);">Responsive mega-menu that adapts perfectly to mobile devices.</p>
+      </div>
+      <div class="card">
+        <h3>✓ Compliance Center</h3>
+        <p style="margin-top: 1rem; line-height: 1.8; color: rgba(245,245,247,0.7);">OSHA, NFPA, and EPA compliance guides integrated into product pages.</p>
+      </div>
+      <div class="card">
+        <h3>📚 Resource Library</h3>
+        <p style="margin-top: 1rem; line-height: 1.8; color: rgba(245,245,247,0.7);">Training materials, spec sheets, installation guides, and best practices.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section case-section-alt">
+    <h2>Impact & Results</h2>
+    <div class="grid-2" style="margin-top: 2rem;">
+      <div class="card" style="text-align: center; padding: 3rem 2rem;">
+        <div style="font-size: 3rem; font-weight: 700; background: linear-gradient(to right, #f97316, #dc2626); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">85%</div>
+        <p style="margin-top: 0.5rem; font-size: 1.125rem; color: rgba(245,245,247,0.7);">Improvement in Task Success Rate</p>
+      </div>
+      <div class="card" style="text-align: center; padding: 3rem 2rem;">
+        <div style="font-size: 3rem; font-weight: 700; background: linear-gradient(to right, #f97316, #dc2626); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">60%</div>
+        <p style="margin-top: 0.5rem; font-size: 1.125rem; color: rgba(245,245,247,0.7);">Faster Product Discovery</p>
+      </div>
+      <div class="card" style="text-align: center; padding: 3rem 2rem;">
+        <div style="font-size: 3rem; font-weight: 700; background: linear-gradient(to right, #f97316, #dc2626); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">45%</div>
+        <p style="margin-top: 0.5rem; font-size: 1.125rem; color: rgba(245,245,247,0.7);">Increase in Cross-Brand Sales</p>
+      </div>
+      <div class="card" style="text-align: center; padding: 3rem 2rem;">
+        <div style="font-size: 3rem; font-weight: 700; background: linear-gradient(to right, #f97316, #dc2626); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">92%</div>
+        <p style="margin-top: 0.5rem; font-size: 1.125rem; color: rgba(245,245,247,0.7);">User Satisfaction Score</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <h2>Key Learnings</h2>
+    <div class="card" style="max-width: 800px; margin: 2rem auto; padding: 2.5rem;">
+      <ul style="padding-left: 1.5rem; line-height: 2; font-size: 1.125rem; color: rgba(245,245,247,0.7);">
+        <li>Consistency doesn't mean identical - each brand needs room for its identity</li>
+        <li>B2B buyers value efficiency over aesthetics, but both are important</li>
+        <li>Industry-specific content significantly improves conversion</li>
+        <li>Mobile optimization is critical even for B2B industrial buyers</li>
+        <li>Compliance information must be easily accessible throughout the journey</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer style="padding: 3rem 1.5rem; border-top: 1px solid rgba(255,255,255,0.1); text-align: center;">
+    <a href="../index.html" style="display: inline-block; padding: 1rem 2rem; background: linear-gradient(to right, #f97316, #dc2626); color: white; border-radius: 9999px; text-decoration: none; font-weight: 600;">
+      View More Projects
+    </a>
+    <p style="margin-top: 2rem; color: rgba(245,245,247,0.6);">© 2026 DARLA. All rights reserved.</p>
+  </footer>
+
+  <script>
+    window.addEventListener('scroll', () => {
+      const progress = document.querySelector('.case-progress');
+      const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (window.scrollY / windowHeight) * 100;
+      progress.style.width = scrolled + '%';
+    });
+  </script>
+</body>
+</html>

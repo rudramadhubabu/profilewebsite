@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Justrite Safety Group: Multi-Brand B2B Ecommerce Redesign - Industrial Safety Case Study</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        /* Additional styles specific to case study */
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(to right, #f97316, #ef4444, #f97316);
+            transform-origin: 0%;
+            z-index: 9999;
+            transform: scaleX(0);
+        }
+
+        .hero-parallax {
+            transition: transform 0.1s ease-out;
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .scroll-indicator {
+            animation: bounce 1.5s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(8px); }
+        }
+
+        /* Tab styles */
+        .tabs-container {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .tab-button {
+            transition: all 0.3s ease;
+        }
+
+        .tab-button.active {
+            background: #f97316;
+            color: white;
+            box-shadow: 0 10px 30px rgba(249, 115, 22, 0.2);
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Severity badges */
+        .severity-p0 { background: rgba(239, 68, 68, 0.2); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.3); }
+        .severity-p1 { background: rgba(249, 115, 22, 0.2); color: #fb923c; border: 1px solid rgba(249, 115, 22, 0.3); }
+        .severity-p2 { background: rgba(234, 179, 8, 0.2); color: #facc15; border: 1px solid rgba(234, 179, 8, 0.3); }
+        .severity-p3 { background: rgba(59, 130, 246, 0.2); color: #60a5fa; border: 1px solid rgba(59, 130, 246, 0.3); }
+        .severity-p4 { background: rgba(34, 197, 94, 0.2); color: #4ade80; border: 1px solid rgba(34, 197, 94, 0.3); }
+        .severity-p5 { background: rgba(168, 85, 247, 0.2); color: #c084fc; border: 1px solid rgba(168, 85, 247, 0.3); }
+
+        /* Empathy map grid */
+        .empathy-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .empathy-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body class="bg-[#0A0A0A] text-white">
+    <!-- Progress Bar -->
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-40 bg-[#0A0A0A]/80 backdrop-blur-xl border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 py-4 flex items-center justify-between">
+            <a href="../index.html" class="flex items-center gap-2 text-white/70 hover:text-white transition-colors group">
+                <svg class="w-5 h-5 group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                </svg>
+                <span class="font-medium">Back to Portfolio</span>
+            </a>
+            <button id="themeToggle" class="p-2 rounded-full bg-white/5 hover:bg-white/10 transition-colors" aria-label="Toggle theme">
+                <svg class="w-5 h-5 sun-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0 hero-parallax" id="heroBackground">
+            <img src="https://images.unsplash.com/photo-1633098189264-fa815c36618b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmR1c3RyaWFsJTIwc2FmZXR5JTIwY2FiaW5ldCUyMHdhcmVob3VzZXxlbnwxfHx8fDE3NzMzNzk4MjZ8MA&ixlib=rb-4.1.0&q=80&w=1080" 
+                 alt="Industrial safety warehouse with chemical safety cabinets" 
+                 class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-[#0A0A0A]"></div>
+        </div>
+
+        <div class="relative z-10 max-w-6xl mx-auto px-6 lg:px-12 text-center" id="heroContent">
+            <div class="inline-block px-4 py-2 rounded-full bg-orange-500/10 border border-orange-500/30 text-orange-400 text-sm font-medium mb-6 fade-in">
+                Master UX Case Study
+            </div>
+            <h1 class="text-4xl sm:text-5xl lg:text-7xl mb-4 font-bold fade-in" style="letter-spacing: -0.02em; animation-delay: 0.1s;">
+                Justrite Safety Group:<br>Multi-Brand B2B Ecommerce Redesign
+            </h1>
+            <p class="text-xl lg:text-2xl text-white/90 mb-12 font-medium fade-in" style="animation-delay: 0.2s;">
+                Increasing product discovery by 45% through unified navigation architecture
+            </p>
+
+            <!-- Project Overview Cards -->
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 max-w-5xl mx-auto mb-12 fade-in" style="animation-delay: 0.3s;">
+                <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-4 lg:p-6">
+                    <p class="text-sm text-white/60 mb-1">Role</p>
+                    <p class="font-semibold text-lg">Lead UX Designer</p>
+                </div>
+                <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-4 lg:p-6">
+                    <p class="text-sm text-white/60 mb-1">Timeline</p>
+                    <p class="font-semibold text-lg">6 Months</p>
+                </div>
+                <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-4 lg:p-6">
+                    <p class="text-sm text-white/60 mb-1">Impact</p>
+                    <p class="font-semibold text-lg text-green-400">45% ↑ Discovery</p>
+                </div>
+                <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-4 lg:p-6">
+                    <p class="text-sm text-white/60 mb-1">Industry</p>
+                    <p class="font-semibold text-lg">B2B Industrial</p>
+                </div>
+            </div>
+
+            <!-- Key Metrics Bar -->
+            <div class="flex items-center justify-center gap-8 lg:gap-12 text-sm lg:text-base fade-in" style="animation-delay: 0.4s;">
+                <div class="flex items-center gap-2">
+                    <div class="w-2 h-2 bg-green-400 rounded-full"></div>
+                    <span class="text-white/70">45% ↑ Product Discovery</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <div class="w-2 h-2 bg-blue-400 rounded-full"></div>
+                    <span class="text-white/70">40% ↑ Cross-Brand Awareness</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <div class="w-2 h-2 bg-orange-400 rounded-full"></div>
+                    <span class="text-white/70">4 Safety Brands Unified</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10">
+            <div class="flex flex-col items-center gap-2 text-white/50">
+                <span class="text-sm">Scroll to explore</span>
+                <div class="scroll-indicator w-6 h-10 border-2 border-white/30 rounded-full flex items-start justify-center p-2">
+                    <div class="w-1 h-2 bg-white/30 rounded-full"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Context Section -->
+    <section class="py-16 lg:py-24 px-6 bg-[#0A0A0A] border-b border-white/10">
+        <div class="max-w-4xl mx-auto text-center fade-in">
+            <h3 class="text-2xl lg:text-3xl mb-6 font-semibold">The Challenge</h3>
+            <p class="text-lg lg:text-xl text-white/70 leading-relaxed">
+                Justrite Safety Group manages <strong class="text-white">four distinct industrial safety brands</strong> (Justrite, Eagle, Checkers, NoTrax) under one platform. Each brand operated independently, creating <strong class="text-orange-400">navigation silos, redundant product searches, and missed cross-selling opportunities</strong>. The goal: design a unified UX architecture that preserves brand identity while enabling seamless multi-brand product discovery.
+            </p>
+        </div>
+    </section>
+
+    <!-- Ecosystem Introduction -->
+    <section class="py-16 lg:py-24 px-6 bg-white/[0.02] border-b border-white/10">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-3xl lg:text-5xl mb-4 font-bold" style="letter-spacing: -0.02em;">Four Brands, One Ecosystem</h2>
+                <p class="text-lg lg:text-xl text-white/70 max-w-3xl mx-auto">
+                    Understanding the multi-brand industrial safety product landscape
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-6 lg:gap-8">
+                <!-- Justrite -->
+                <div class="bg-[#0A0A0A] border border-white/10 rounded-2xl p-8 hover:border-white/20 transition-all fade-in">
+                    <div class="flex items-start gap-4 mb-4">
+                        <div class="w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0" style="background-color: rgba(196, 30, 58, 0.15);">
+                            <svg class="w-7 h-7" style="color: #C41E3A;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                            </svg>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-2xl mb-1 font-bold" style="color: #C41E3A;">Justrite</h3>
+                            <p class="text-sm text-white/60 font-medium">Hazardous Storage</p>
+                        </div>
+                    </div>
+                    <p class="text-white/70 leading-relaxed">Safety cabinets, cans & containers for flammable/combustible materials</p>
+                </div>
+
+                <!-- Eagle -->
+                <div class="bg-[#0A0A0A] border border-white/10 rounded-2xl p-8 hover:border-white/20 transition-all fade-in">
+                    <div class="flex items-start gap-4 mb-4">
+                        <div class="w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0" style="background-color: rgba(25, 118, 210, 0.15);">
+                            <svg class="w-7 h-7" style="color: #1976D2;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+                            </svg>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-2xl mb-1 font-bold" style="color: #1976D2;">Eagle</h3>
+                            <p class="text-sm text-white/60 font-medium">Spill Control</p>
+                        </div>
+                    </div>
+                    <p class="text-white/70 leading-relaxed">Containment pallets, berms & absorbent products</p>
+                </div>
+
+                <!-- Checkers -->
+                <div class="bg-[#0A0A0A] border border-white/10 rounded-2xl p-8 hover:border-white/20 transition-all fade-in">
+                    <div class="flex items-start gap-4 mb-4">
+                        <div class="w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0" style="background-color: rgba(245, 124, 0, 0.15);">
+                            <svg class="w-7 h-7" style="color: #F57C00;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
+                            </svg>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-2xl mb-1 font-bold" style="color: #F57C00;">Checkers</h3>
+                            <p class="text-sm text-white/60 font-medium">Motion Safety</p>
+                        </div>
+                    </div>
+                    <p class="text-white/70 leading-relaxed">Cable protectors, wheel chocks & warning systems</p>
+                </div>
+
+                <!-- NoTrax -->
+                <div class="bg-[#0A0A0A] border border-white/10 rounded-2xl p-8 hover:border-white/20 transition-all fade-in">
+                    <div class="flex items-start gap-4 mb-4">
+                        <div class="w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0" style="background-color: rgba(56, 142, 60, 0.15);">
+                            <svg class="w-7 h-7" style="color: #388E3C;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"></path>
+                            </svg>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-2xl mb-1 font-bold" style="color: #388E3C;">NoTrax</h3>
+                            <p class="text-sm text-white/60 font-medium">Workplace Ergonomics</p>
+                        </div>
+                    </div>
+                    <p class="text-white/70 leading-relaxed">Anti-fatigue mats & floor safety products</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 1: Project Background -->
+    <section class="py-24 lg:py-32 px-6 lg:px-12">
+        <div class="max-w-7xl mx-auto">
+            <div class="fade-in">
+                <div class="inline-block px-4 py-2 rounded-full bg-orange-500/10 border border-orange-500/30 text-orange-400 text-sm font-medium mb-4">
+                    Background
+                </div>
+                <h2 class="text-4xl lg:text-6xl mb-6 font-bold" style="letter-spacing: -0.02em;">Project Background</h2>
+                <div class="h-1 w-20 bg-gradient-to-r from-orange-500 to-red-500 mb-16"></div>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
+                <div class="fade-in">
+                    <div class="relative rounded-3xl overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1747999703278-ef065c39cb18?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmYWN0b3J5JTIwd29ya2VyJTIwc2FmZXR5JTIwZXF1aXBtZW50fGVufDF8fHx8MTc3MzM3OTgyN3ww&ixlib=rb-4.1.0&q=80&w=1080" 
+                             alt="Factory workers using PPE and safety equipment" 
+                             class="w-full h-[500px] object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                    </div>
+                </div>
+
+                <div class="fade-in">
+                    <p class="text-xl lg:text-2xl text-white/90 leading-relaxed mb-8 font-medium">
+                        The Justrite Safety Group operates multiple specialized safety brands that provide critical workplace safety products.
+                    </p>
+
+                    <div class="bg-red-500/5 border border-red-500/20 rounded-2xl p-6 mb-6">
+                        <h3 class="text-xl font-semibold mb-4 text-red-400 flex items-center gap-2">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+                            </svg>
+                            The Challenge:
+                        </h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-3 text-white/80">
+                                <div class="w-1.5 h-1.5 rounded-full bg-red-500 mt-2 flex-shrink-0"></div>
+                                Each brand has its own website, navigation system, and product ecosystem.
+                            </li>
+                            <li class="flex items-start gap-3 text-white/80">
+                                <div class="w-1.5 h-1.5 rounded-full bg-red-500 mt-2 flex-shrink-0"></div>
+                                Users must navigate multiple websites to find related safety solutions.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="fade-in mb-16">
+                <h3 class="text-2xl lg:text-3xl mb-6 font-semibold">For example:</h3>
+                
+                <div class="bg-gradient-to-br from-orange-500/5 to-red-500/5 border border-orange-500/20 rounded-3xl p-8 lg:p-10">
+                    <div class="flex items-start gap-4 mb-6">
+                        <svg class="w-8 h-8 text-orange-500 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                        </svg>
+                        <div>
+                            <p class="text-xl font-semibold mb-3">A facility safety manager might need:</p>
+                        </div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="flex items-center gap-3 p-4 rounded-xl bg-[#0A0A0A] border border-white/10">
+                            <svg class="w-5 h-5 text-orange-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <span class="text-white/80">Flammable liquid storage cabinets</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-4 rounded-xl bg-[#0A0A0A] border border-white/10">
+                            <svg class="w-5 h-5 text-orange-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <span class="text-white/80">Spill containment pallets</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-4 rounded-xl bg-[#0A0A0A] border border-white/10">
+                            <svg class="w-5 h-5 text-orange-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <span class="text-white/80">Cable protection ramps</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-4 rounded-xl bg-[#0A0A0A] border border-white/10">
+                            <svg class="w-5 h-5 text-orange-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <span class="text-white/80">Anti-fatigue floor mats</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 p-4 rounded-xl bg-red-500/10 border border-red-500/20">
+                        <p class="text-white/80 italic">
+                            These solutions exist across different brand sites, creating a fragmented experience.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="fade-in bg-gradient-to-br from-orange-500/10 to-red-500/10 border-2 border-orange-500/30 rounded-3xl p-8 lg:p-12">
+                <div class="flex items-start gap-4 mb-4">
+                    <svg class="w-10 h-10 text-orange-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+                    </svg>
+                    <div>
+                        <h3 class="text-2xl lg:text-4xl mb-4 font-semibold">The UX Challenge:</h3>
+                        <p class="text-xl lg:text-2xl text-white/90 leading-relaxed">
+                            How can we create a cohesive product discovery experience across multiple industrial safety brands while maintaining each brand's identity?
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: UX Problem Statement -->
+    <section class="py-24 lg:py-32 px-6 lg:px-12 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-b from-orange-500/5 to-transparent"></div>
+        
+        <div class="max-w-7xl mx-auto relative">
+            <div class="fade-in">
+                <div class="inline-block px-4 py-2 rounded-full bg-orange-500/10 border border-orange-500/30 text-orange-400 text-sm font-medium mb-4">
+                    Problem
+                </div>
+                <h2 class="text-4xl lg:text-6xl mb-6 font-bold" style="letter-spacing: -0.02em;">UX Problem Statement</h2>
+                <div class="h-1 w-20 bg-gradient-to-r from-orange-500 to-red-500 mb-8"></div>
+                <p class="text-lg text-orange-400 italic mb-12">Define the UX problem clearly.</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
+                <div class="fade-in">
+                    <div class="relative rounded-3xl overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1764675902777-6c0c0ac16f61?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaGVtaWNhbCUyMHN0b3JhZ2UlMjBmYWNpbGl0eSUyMGluZHVzdHJpYWx8ZW58MXx8fHwxNzczMzc5ODI3fDA&ixlib=rb-4.1.0&q=80&w=1080" 
+                             alt="Chemical storage facility industrial" 
+                             class="w-full h-[500px] object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    </div>
+                </div>
+
+                <div class="fade-in">
+                    <p class="text-xl lg:text-2xl text-white/90 leading-relaxed mb-8 font-medium">
+                        Safety professionals often need to quickly locate compliant safety equipment.
+                    </p>
+
+                    <div class="bg-red-500/5 border border-red-500/20 rounded-2xl p-6 mb-8">
+                        <h3 class="text-xl font-semibold mb-4 text-red-400">
+                            However, industrial safety platforms often suffer from:
+                        </h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-3 text-lg text-white/80">
+                                <svg class="w-5 h-5 text-red-500 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+                                </svg>
+                                Complex product catalogs
+                            </li>
+                            <li class="flex items-start gap-3 text-lg text-white/80">
+                                <svg class="w-5 h-5 text-red-500 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+                                </svg>
+                                Technical terminology barriers
+                            </li>
+                            <li class="flex items-start gap-3 text-lg text-white/80">
+                                <svg class="w-5 h-5 text-red-500 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+                                </svg>
+                                Fragmented product ecosystems
+                            </li>
+                            <li class="flex items-start gap-3 text-lg text-white/80">
+                                <svg class="w-5 h-5 text-red-500 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+                                </svg>
+                                Unclear compliance guidance
+                            </li>
+                            <li class="flex items-start gap-3 text-lg text-white/80">
+                                <svg class="w-5 h-5 text-red-500 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+                                </svg>
+                                Difficult navigation between related safety solutions
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="fade-in bg-gradient-to-br from-red-500/10 to-orange-500/10 border-2 border-red-500/30 rounded-3xl p-8 lg:p-10">
+                <h3 class="text-2xl lg:text-3xl mb-6 font-semibold">In the current experience:</h3>
+                <p class="text-xl text-white/80 mb-8 leading-relaxed">
+                    Users must visit multiple brand websites to find complementary products.
+                </p>
+                
+                <div class="bg-[#0A0A0A]/50 backdrop-blur-sm border border-red-500/20 rounded-2xl p-6">
+                    <p class="text-lg font-semibold mb-6 text-red-400">This increases:</p>
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="text-center p-4 rounded-xl bg-red-500/5 border border-red-500/10">
+                            <svg class="w-8 h-8 text-red-400 mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+                            </svg>
+                            <p class="text-white/80 font-medium">Decision time</p>
+                        </div>
+                        <div class="text-center p-4 rounded-xl bg-red-500/5 border border-red-500/10">
+                            <svg class="w-8 h-8 text-red-400 mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                            </svg>
+                            <p class="text-white/80 font-medium">Research effort</p>
+                        </div>
+                        <div class="text-center p-4 rounded-xl bg-red-500/5 border border-red-500/10">
+                            <svg class="w-8 h-8 text-red-400 mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+                            </svg>
+                            <p class="text-white/80 font-medium">Purchasing friction</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: UX Objectives -->
+    <section class="py-24 lg:py-32 px-6 lg:px-12 bg-white/[0.02]">
+        <div class="max-w-7xl mx-auto">
+            <div class="fade-in">
+                <div class="inline-block px-4 py-2 rounded-full bg-orange-500/10 border border-orange-500/30 text-orange-400 text-sm font-medium mb-4">
+                    Objectives
+                </div>
+                <h2 class="text-4xl lg:text-6xl mb-6 font-bold" style="letter-spacing: -0.02em;">UX Objectives</h2>
+                <div class="h-1 w-20 bg-gradient-to-r from-orange-500 to-red-500 mb-8"></div>
+                <p class="text-lg text-orange-400 italic mb-12">Define measurable UX goals.</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Primary Goals -->
+                <div class="fade-in">
+                    <div class="mb-8 flex items-center gap-3">
+                        <svg class="w-10 h-10 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+                        </svg>
+                        <h3 class="text-3xl lg:text-4xl font-semibold">Primary goals:</h3>
+                    </div>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-4 p-5 rounded-xl bg-[#0A0A0A] border border-orange-500/20 hover:border-orange-500/40 transition-colors">
+                            <svg class="w-6 h-6 text-orange-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <span class="text-lg text-white/80">Improve product discovery across brands.</span>
+                        </li>
+                        <li class="flex items-start gap-4 p-5 rounded-xl bg-[#0A0A0A] border border-orange-500/20 hover:border-orange-500/40 transition-colors">
+                            <svg class="w-6 h-6 text-orange-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <span class="text-lg text-white/80">Reduce the time required for users to find compliant safety solutions.</span>
+                        </li>
+                        <li class="flex items-start gap-4 p-5 rounded-xl bg-[#0A0A0A] border border-orange-500/20 hover:border-orange-500/40 transition-colors">
+                            <svg class="w-6 h-6 text-orange-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <span class="text-lg text-white/80">Enable users to explore related safety equipment categories across the ecosystem.</span>
+                        </li>
+                        <li class="flex items-start gap-4 p-5 rounded-xl bg-[#0A0A0A] border border-orange-500/20 hover:border-orange-500/40 transition-colors">
+                            <svg class="w-6 h-6 text-orange-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <span class="text-lg text-white/80">Provide clear regulatory and compliance guidance.</span>
+                        </li>
+                        <li class="flex items-start gap-4 p-5 rounded-xl bg-[#0A0A0A] border border-orange-500/20 hover:border-orange-500/40 transition-colors">
+                            <svg class="w-6 h-6 text-orange-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <span class="text-lg text-white/80">Improve navigation clarity across product categories.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Secondary Goals -->
+                <div class="fade-in">
+                    <div class="mb-8 flex items-center gap-3">
+                        <svg class="w-10 h-10 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                        </svg>
+                        <h3 class="text-3xl lg:text-4xl font-semibold">Secondary goals:</h3>
+                    </div>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-4 p-5 rounded-xl bg-[#0A0A0A] border border-green-500/20 hover:border-green-500/40 transition-colors">
+                            <svg class="w-6 h-6 text-green-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <span class="text-lg text-white/80">Increase distributor inquiries.</span>
+                        </li>
+                        <li class="flex items-start gap-4 p-5 rounded-xl bg-[#0A0A0A] border border-green-500/20 hover:border-green-500/40 transition-colors">
+                            <svg class="w-6 h-6 text-green-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <span class="text-lg text-white/80">Increase product catalog downloads.</span>
+                        </li>
+                        <li class="flex items-start gap-4 p-5 rounded-xl bg-[#0A0A0A] border border-green-500/20 hover:border-green-500/40 transition-colors">
+                            <svg class="w-6 h-6 text-green-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <span class="text-lg text-white/80">Improve trust and authority in industrial safety expertise.</span>
+                        </li>
+                    </ul>
+
+                    <div class="mt-8 p-6 rounded-2xl bg-gradient-to-br from-blue-500/10 to-cyan-500/10 border border-blue-500/20">
+                        <svg class="w-10 h-10 text-blue-500 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                        </svg>
+                        <p class="text-white/80 leading-relaxed">
+                            All objectives are measurable through analytics tracking, user testing feedback, and business metrics monitoring.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conclusion Note -->
+    <section class="py-16 px-6 bg-gradient-to-br from-orange-500/10 to-red-500/10 border-y border-orange-500/20">
+        <div class="max-w-4xl mx-auto text-center">
+            <h3 class="text-2xl lg:text-3xl mb-6 font-bold">Complete Case Study</h3>
+            <p class="text-lg text-white/80 leading-relaxed mb-6">
+                This HTML version contains the core content from the Industrial Safety Case Study. The complete interactive version includes:
+            </p>
+            <ul class="text-left max-w-2xl mx-auto space-y-3 mb-8">
+                <li class="flex items-start gap-3">
+                    <svg class="w-5 h-5 text-orange-500 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <span class="text-white/70">User Personas with empathy maps</span>
+                </li>
+                <li class="flex items-start gap-3">
+                    <svg class="w-5 h-5 text-orange-500 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <span class="text-white/70">Heuristic evaluation with severity ratings</span>
+                </li>
+                <li class="flex items-start gap-3">
+                    <svg class="w-5 h-5 text-orange-500 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <span class="text-white/70">User journey mapping</span>
+                </li>
+                <li class="flex items-start gap-3">
+                    <svg class="w-5 h-5 text-orange-500 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <span class="text-white/70">Information architecture diagrams</span>
+                </li>
+                <li class="flex items-start gap-3">
+                    <svg class="w-5 h-5 text-orange-500 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <span class="text-white/70">UX insights and experience strategy</span>
+                </li>
+                <li class="flex items-start gap-3">
+                    <svg class="w-5 h-5 text-orange-500 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <span class="text-white/70">Homepage UX structure and wireframes</span>
+                </li>
+            </ul>
+            <p class="text-white/60 italic">
+                Due to the complexity and size of the full React component (1800+ lines), this HTML version focuses on the key narrative sections. Additional interactive components and detailed tables are available in the source React application.
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-6 border-t border-white/10">
+        <div class="max-w-7xl mx-auto text-center">
+            <p class="text-white/60">&copy; 2026 UX Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script>
+        // Progress bar
+        function updateProgressBar() {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrollPercentage = (scrollTop / scrollHeight);
+            document.getElementById('progressBar').style.transform = `scaleX(${scrollPercentage})`;
+        }
+
+        // Parallax effect for hero
+        function updateParallax() {
+            const scrollTop = window.pageYOffset;
+            const heroBackground = document.getElementById('heroBackground');
+            const heroContent = document.getElementById('heroContent');
+            
+            if (heroBackground && scrollTop < window.innerHeight) {
+                const yOffset = scrollTop * 0.5;
+                heroBackground.style.transform = `translateY(${yOffset}px)`;
+            }
+            
+            if (heroContent && scrollTop < window.innerHeight) {
+                const opacity = 1 - (scrollTop / (window.innerHeight * 0.7));
+                heroContent.style.opacity = Math.max(0, opacity);
+            }
+        }
+
+        // Fade in animations on scroll
+        function checkFadeIn() {
+            const fadeElements = document.querySelectorAll('.fade-in');
+            fadeElements.forEach(element => {
+                const rect = element.getBoundingClientRect();
+                const isVisible = rect.top < window.innerHeight - 100;
+                if (isVisible) {
+                    element.classList.add('visible');
+                }
+            });
+        }
+
+        // Tab functionality
+        function initTabs() {
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabContents = document.querySelectorAll('.tab-content');
+            
+            tabButtons.forEach((button, index) => {
+                button.addEventListener('click', () => {
+                    // Remove active class from all buttons and contents
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    tabContents.forEach(content => content.classList.remove('active'));
+                    
+                    // Add active class to clicked button and corresponding content
+                    button.classList.add('active');
+                    tabContents[index].classList.add('active');
+                });
+            });
+        }
+
+        // Theme toggle
+        document.getElementById('themeToggle').addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark');
+        });
+
+        // Initialize
+        window.addEventListener('scroll', () => {
+            updateProgressBar();
+            updateParallax();
+            checkFadeIn();
+        });
+
+        window.addEventListener('load', () => {
+            checkFadeIn();
+            initTabs();
+            
+            // Trigger initial animations
+            const heroElements = document.querySelectorAll('#heroContent .fade-in');
+            heroElements.forEach((el, index) => {
+                setTimeout(() => {
+                    el.classList.add('visible');
+                }, index * 100);
+            });
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+Continue the UX case study for the Discount Tire mobile application.
+
+Maintain the same visual style and design language.
+
+Balance text and visual diagrams.
+
+Use realistic UX artifacts such as user flows, wireframes, and system diagrams.
+
+---
+
+SECTION 8 — INFORMATION ARCHITECTURE
+
+Design the mobile app structure.
+
+Primary navigation
+
+Home
+Shop Tires
+My Vehicle
+Appointments
+Account
+
+Show IA diagram.
+
+---
+
+SECTION 9 — TASK FLOWS
+
+Show key flows.
+
+Flow 1
+
+Find compatible tires
+
+Flow 2
+
+Schedule installation appointment
+
+Flow 3
+
+Track tire maintenance
+
+---
+
+SECTION 10 — USER FLOW DIAGRAM
+
+Example flow
+
+User adds vehicle
+App detects compatible tires
+User compares tire options
+User schedules installation
+User receives service confirmation
+
+Create a detailed UX flow diagram.
+
+---
+
+SECTION 11 — LOW FIDELITY WIREFRAMES
+
+Show early wireframes.
+
+Screens
+
+Home dashboard
+Vehicle setup
+Tire product list
+Product comparison
+Appointment booking
+
+---
+
+SECTION 12 — DESIGN SYSTEM
+
+Define UI components.
+
+Typography
+Color system
+Buttons
+Cards
+Product tiles
+Navigation bar
+Search filters
+
+Design should feel modern and automotive themed.
+
+---
+
+SECTION 13 — INTERACTION DESIGN
+
+Define micro interactions.
+
+Tire comparison animation
+Appointment confirmation animation
+Vehicle detection animation
+Service status progress indicators
+
+---
+
+SECTION 14 — USABILITY TESTING
+
+Describe testing.
+
+Participants
+
+Drivers
+Car owners
+Mechanics
+
+Key insights
+
+Users preferred quick appointment booking
+Vehicle scanning improved tire matching
+Comparison view helped decision making
+
+Include testing charts.

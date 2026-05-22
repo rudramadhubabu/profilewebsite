@@ -1,0 +1,15 @@
+Sections to include:
+1. Hero Section - DONE
+2. Company Overview - with services grid
+3. Problem Statement - 4 problems
+4. User Research - methods, insights, stats
+5. User Personas - 2 personas with full details
+6. User Journey - 6 journey steps
+7. Product Opportunity - 6 features
+8. Information Architecture - 5 nav items + diagram
+9. Task Flows - 3 flows with steps
+10. User Flow Diagram - 5 step flow
+11. Design System - principles, colors, typography, components
+12. Final UI Design - onboarding (5 screens), main screens (5 screens), appointment flow (8 screens), add vehicle flow (5 screens), tire browse/compare (5 screens)
+13. Usability Testing - participants, test results
+14. Footer

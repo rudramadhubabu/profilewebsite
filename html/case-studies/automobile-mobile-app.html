@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Automobile Mobile App - Case Study | DARLA</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <style>
+    body { background: white; color: #1d1d1f; }
+    .case-progress { position: fixed; top: 0; left: 0; height: 4px; background: #2563eb; z-index: 50; width: 0%; }
+    .case-back-btn { position: fixed; top: 1rem; left: 1rem; z-index: 50; display: flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; background: white; border: 2px solid rgba(0,0,0,0.2); border-radius: 9999px; text-decoration: none; color: black; font-weight: 500; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: all 0.3s ease; }
+    .case-back-btn:hover { border-color: rgba(0,0,0,0.4); }
+    .case-hero { position: relative; height: 100vh; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+    .case-hero-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+    .case-hero-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.5), transparent); }
+    .case-hero-content { position: relative; z-index: 10; max-width: 1280px; margin: 0 auto; padding: 0 1.5rem; color: white; text-align: center; }
+    .case-badge { display: inline-block; padding: 0.5rem 1rem; border-radius: 9999px; background: rgba(37,99,235,0.1); border: 1px solid rgba(37,99,235,0.3); color: #2563eb; font-size: 0.875rem; margin-bottom: 1.5rem; }
+    .case-title { font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 700; letter-spacing: -0.02em; margin-bottom: 1.5rem; }
+    .case-subtitle { font-size: clamp(1.125rem, 2vw, 1.5rem); color: rgba(255,255,255,0.9); max-width: 48rem; margin: 0 auto; }
+    .case-section { padding: 6rem 1.5rem; max-width: 1280px; margin: 0 auto; }
+    .case-section-alt { background: #f5f5f7; }
+    h2 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; margin-bottom: 1.5rem; }
+    h3 { font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 600; margin-bottom: 1rem; }
+    .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem; }
+    .card { padding: 2rem; border-radius: 1rem; background: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+    .card-alt { background: #f5f5f7; }
+  </style>
+</head>
+<body>
+  <div class="case-progress"></div>
+  
+  <a href="../index.html#work" class="case-back-btn">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <line x1="19" y1="12" x2="5" y2="12"></line>
+      <polyline points="12 19 5 12 12 5"></polyline>
+    </svg>
+    <span>Back to Portfolio</span>
+  </a>
+
+  <section class="case-hero">
+    <img src="https://images.unsplash.com/photo-1758411898021-ef0dadaaa295?w=1920&q=80" alt="Mobile app" class="case-hero-img">
+    <div class="case-hero-overlay"></div>
+    <div class="case-hero-content">
+      <div class="case-badge">iOS Mobile App</div>
+      <h1 class="case-title">Discount Tire Mobile App</h1>
+      <p class="case-subtitle">America's most trusted tire retailer, now in your pocket</p>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <h2>Project Overview</h2>
+    <p style="font-size: 1.125rem; line-height: 1.8; color: #4b5563; margin-top: 1rem;">
+      A comprehensive iOS mobile application for Discount Tire that enables customers to browse tires, schedule appointments, track installations, and manage their vehicle garage on the go.
+    </p>
+    <div class="grid-2">
+      <div class="card">
+        <h3>Company</h3>
+        <p>Discount Tire - America's #1 tire retailer with 1,100+ stores</p>
+      </div>
+      <div class="card">
+        <h3>Role</h3>
+        <p>Lead UX/UI Designer</p>
+      </div>
+      <div class="card">
+        <h3>Platform</h3>
+        <p>iOS (iPhone & iPad)</p>
+      </div>
+      <div class="card">
+        <h3>Timeline</h3>
+        <p>8 months (2024)</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section case-section-alt">
+    <h2>The Challenge</h2>
+    <p style="font-size: 1.125rem; line-height: 1.8; color: #4b5563; margin-top: 1rem;">
+      Discount Tire needed a mobile app to meet modern customer expectations for convenience and digital-first experiences.
+    </p>
+    <div class="grid-2" style="margin-top: 2rem;">
+      <div class="card">
+        <h3>Customer Pain Points</h3>
+        <ul style="margin-top: 1rem; padding-left: 1.5rem; line-height: 1.8;">
+          <li>Difficult to find the right tires for their vehicle</li>
+          <li>Scheduling appointments was phone-only</li>
+          <li>No way to track installation status</li>
+          <li>Managing multiple vehicles was cumbersome</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Business Goals</h3>
+        <ul style="margin-top: 1rem; padding-left: 1.5rem; line-height: 1.8;">
+          <li>Increase mobile appointment bookings</li>
+          <li>Reduce call center volume</li>
+          <li>Improve customer retention</li>
+          <li>Compete with digital-first competitors</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <h2>User Research</h2>
+    <p style="font-size: 1.125rem; line-height: 1.8; color: #4b5563; margin-top: 1rem;">
+      We conducted extensive research to understand customer needs, behaviors, and expectations.
+    </p>
+    <div class="grid-2" style="margin-top: 2rem;">
+      <div class="card card-alt">
+        <h3>Research Activities</h3>
+        <ul style="margin-top: 1rem; padding-left: 1.5rem; line-height: 1.8;">
+          <li>25 user interviews</li>
+          <li>Survey of 500+ customers</li>
+          <li>5 in-store observations</li>
+          <li>Competitive analysis of 12 apps</li>
+          <li>Analytics review of website behavior</li>
+        </ul>
+      </div>
+      <div class="card card-alt">
+        <h3>Key Insights</h3>
+        <ul style="margin-top: 1rem; padding-left: 1.5rem; line-height: 1.8;">
+          <li>78% wanted mobile appointment scheduling</li>
+          <li>Users struggled to identify tire sizes</li>
+          <li>Price transparency was critical</li>
+          <li>Installation tracking reduced anxiety</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section case-section-alt">
+    <h2>User Personas</h2>
+    <div class="grid-2" style="margin-top: 2rem;">
+      <div class="card">
+        <h3>Jessica - Busy Professional</h3>
+        <p style="margin-top: 0.5rem;"><strong>Age:</strong> 35 | <strong>Tech Savvy:</strong> High</p>
+        <p style="margin-top: 1rem; line-height: 1.8;"><strong>Goals:</strong> Quick tire purchases, minimal phone calls, convenient scheduling</p>
+        <p style="margin-top: 0.5rem; line-height: 1.8;"><strong>Frustrations:</strong> Limited time, hates phone calls, values convenience</p>
+      </div>
+      <div class="card">
+        <h3>Tom - DIY Enthusiast</h3>
+        <p style="margin-top: 0.5rem;"><strong>Age:</strong> 52 | <strong>Tech Savvy:</strong> Medium</p>
+        <p style="margin-top: 1rem; line-height: 1.8;"><strong>Goals:</strong> Research tire specifications, compare options, best price</p>
+        <p style="margin-top: 0.5rem; line-height: 1.8;"><strong>Frustrations:</strong> Overwhelming options, unclear specifications, price confusion</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <h2>Key Features</h2>
+    <div class="grid-2" style="margin-top: 2rem;">
+      <div class="card card-alt">
+        <h3>🚗 My Garage</h3>
+        <p style="margin-top: 1rem; line-height: 1.8;">Add and manage multiple vehicles with automatic tire size detection and purchase history.</p>
+      </div>
+      <div class="card card-alt">
+        <h3>🔍 Tire Browse & Compare</h3>
+        <p style="margin-top: 1rem; line-height: 1.8;">Advanced filtering, side-by-side comparison, and detailed specifications for informed decisions.</p>
+      </div>
+      <div class="card card-alt">
+        <h3>📅 Appointment Scheduling</h3>
+        <p style="margin-top: 1rem; line-height: 1.8;">Book installations with real-time availability, store selection, and confirmation.</p>
+      </div>
+      <div class="card card-alt">
+        <h3>📍 Store Locator</h3>
+        <p style="margin-top: 1rem; line-height: 1.8;">Find nearby stores with directions, hours, services, and real-time availability.</p>
+      </div>
+      <div class="card card-alt">
+        <h3>🔔 Installation Tracking</h3>
+        <p style="margin-top: 1rem; line-height: 1.8;">Real-time status updates from check-in to completion with push notifications.</p>
+      </div>
+      <div class="card card-alt">
+        <h3>⭐ Rewards Integration</h3>
+        <p style="margin-top: 1rem; line-height: 1.8;">View and redeem loyalty rewards, track points, and get exclusive offers.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section case-section-alt">
+    <h2>Design Process</h2>
+    <div style="margin-top: 2rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+      <div class="card" style="margin-bottom: 1.5rem;">
+        <h3>1. Onboarding Flow</h3>
+        <p style="margin-top: 1rem; line-height: 1.8;">Designed a welcoming 3-step onboarding to introduce key features and encourage account creation.</p>
+      </div>
+      <div class="card" style="margin-bottom: 1.5rem;">
+        <h3>2. Vehicle Setup</h3>
+        <p style="margin-top: 1rem; line-height: 1.8;">Streamlined process to add vehicles using VIN scanning or manual entry with intelligent defaults.</p>
+      </div>
+      <div class="card" style="margin-bottom: 1.5rem;">
+        <h3>3. Tire Selection</h3>
+        <p style="margin-top: 1rem; line-height: 1.8;">Created an intuitive browse experience with filters, sorting, and comparison tools.</p>
+      </div>
+      <div class="card">
+        <h3>4. Appointment Booking</h3>
+        <p style="margin-top: 1rem; line-height: 1.8;">Simplified multi-step flow: select store → choose date → pick time → confirm.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <h2>Usability Testing</h2>
+    <div class="grid-2" style="margin-top: 2rem;">
+      <div class="card">
+        <h3>Testing Methodology</h3>
+        <ul style="margin-top: 1rem; padding-left: 1.5rem; line-height: 1.8;">
+          <li>3 rounds with 18 participants</li>
+          <li>Task-based scenarios</li>
+          <li>Remote and in-person sessions</li>
+          <li>Prototype testing with Figma</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Key Improvements</h3>
+        <ul style="margin-top: 1rem; padding-left: 1.5rem; line-height: 1.8;">
+          <li>Added tire comparison feature</li>
+          <li>Simplified appointment flow</li>
+          <li>Enhanced vehicle setup</li>
+          <li>Improved navigation structure</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section case-section-alt">
+    <h2>Impact & Results</h2>
+    <div class="grid-2" style="margin-top: 2rem;">
+      <div class="card" style="text-align: center; padding: 3rem 2rem;">
+        <div style="font-size: 3rem; font-weight: 700; color: #2563eb;">200K+</div>
+        <p style="margin-top: 0.5rem; font-size: 1.125rem;">Downloads in First Month</p>
+      </div>
+      <div class="card" style="text-align: center; padding: 3rem 2rem;">
+        <div style="font-size: 3rem; font-weight: 700; color: #2563eb;">4.8★</div>
+        <p style="margin-top: 0.5rem; font-size: 1.125rem;">App Store Rating</p>
+      </div>
+      <div class="card" style="text-align: center; padding: 3rem 2rem;">
+        <div style="font-size: 3rem; font-weight: 700; color: #2563eb;">45%</div>
+        <p style="margin-top: 0.5rem; font-size: 1.125rem;">Mobile Appointment Bookings</p>
+      </div>
+      <div class="card" style="text-align: center; padding: 3rem 2rem;">
+        <div style="font-size: 3rem; font-weight: 700; color: #2563eb;">30%</div>
+        <p style="margin-top: 0.5rem; font-size: 1.125rem;">Reduction in Call Volume</p>
+      </div>
+    </div>
+  </section>
+
+  <footer style="padding: 3rem 1.5rem; border-top: 1px solid #e5e7eb; text-align: center;">
+    <a href="../index.html" style="display: inline-block; padding: 1rem 2rem; background: #1d1d1f; color: white; border-radius: 9999px; text-decoration: none; font-weight: 600;">
+      View More Projects
+    </a>
+    <p style="margin-top: 2rem; color: #6b7280;">© 2026 DARLA. All rights reserved.</p>
+  </footer>
+
+  <script>
+    window.addEventListener('scroll', () => {
+      const progress = document.querySelector('.case-progress');
+      const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (window.scrollY / windowHeight) * 100;
+      progress.style.width = scrolled + '%';
+    });
+  </script>
+</body>
+</html>

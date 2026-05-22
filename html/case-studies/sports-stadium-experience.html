@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sports Stadium Experience - Case Study | DARLA</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <style>
+    .dark { --background: #0A0A0A; --foreground: #f5f5f7; }
+    body { background: var(--background); color: var(--foreground); }
+    .case-progress { position: fixed; top: 0; left: 0; height: 4px; background: linear-gradient(to right, #3b82f6, #a855f7, #ec4899); z-index: 50; width: 0%; }
+    .case-back-btn { position: fixed; top: 1rem; left: 1rem; z-index: 50; display: flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; background: rgba(255,255,255,0.95); backdrop-filter: blur(20px); border: 2px solid rgba(0,0,0,0.2); border-radius: 9999px; text-decoration: none; color: black; font-weight: 500; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: all 0.3s ease; }
+    .case-hero { position: relative; height: 100vh; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+    .case-hero-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+    .case-hero-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.5), transparent); }
+    .case-hero-content { position: relative; z-index: 10; max-width: 1280px; margin: 0 auto; padding: 0 1.5rem; color: white; text-align: center; }
+    .case-badge { display: inline-block; padding: 0.5rem 1rem; border-radius: 9999px; background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.3); color: #3b82f6; font-size: 0.875rem; margin-bottom: 1.5rem; }
+    .case-title { font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 700; letter-spacing: -0.02em; margin-bottom: 1.5rem; }
+    .case-section { padding: 6rem 1.5rem; max-width: 1280px; margin: 0 auto; }
+    .case-section-alt { background: rgba(18, 18, 18, 0.5); }
+    h2 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; margin-bottom: 1.5rem; }
+    h3 { font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 600; margin-bottom: 1rem; }
+    .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem; }
+    .card { padding: 2rem; border-radius: 1rem; background: rgba(18, 18, 18, 0.8); box-shadow: 0 4px 6px rgba(0,0,0,0.3); }
+  </style>
+</head>
+<body class="dark">
+  <div class="case-progress"></div>
+  
+  <a href="../index.html#work" class="case-back-btn">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <line x1="19" y1="12" x2="5" y2="12"></line>
+      <polyline points="12 19 5 12 12 5"></polyline>
+    </svg>
+    <span>Back to Portfolio</span>
+  </a>
+
+  <section class="case-hero">
+    <img src="https://images.unsplash.com/photo-1763718627682-4dbc728064d9?w=1920&q=80" alt="Stadium crowd" class="case-hero-img">
+    <div class="case-hero-overlay"></div>
+    <div class="case-hero-content">
+      <div class="case-badge">iOS Mobile Feature</div>
+      <h1 class="case-title">Sports Stadium Social Experience</h1>
+      <p style="font-size: clamp(1.125rem, 2vw, 1.5rem); color: rgba(255,255,255,0.9); max-width: 48rem; margin: 0 auto;">
+        Connecting fans in-stadium with live chat, reactions, and social features
+      </p>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <h2>Project Overview</h2>
+    <p style="font-size: 1.125rem; line-height: 1.8; color: rgba(245,245,247,0.7); margin-top: 1rem;">
+      An innovative iOS app feature that transforms the in-stadium experience by enabling fans to connect with friends, chat in real-time, share reactions, and make match predictions together.
+    </p>
+    <div class="grid-2">
+      <div class="card">
+        <h3>Role</h3>
+        <p style="color: rgba(245,245,247,0.7);">Lead UX/UI Designer</p>
+      </div>
+      <div class="card">
+        <h3>Platform</h3>
+        <p style="color: rgba(245,245,247,0.7);">iOS Mobile App Feature</p>
+      </div>
+      <div class="card">
+        <h3>Timeline</h3>
+        <p style="color: rgba(245,245,247,0.7);">4 months (2024)</p>
+      </div>
+      <div class="card">
+        <h3>Team</h3>
+        <p style="color: rgba(245,245,247,0.7);">2 Designers, 5 Engineers, 1 PM</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section case-section-alt">
+    <h2>The Problem</h2>
+    <p style="font-size: 1.125rem; line-height: 1.8; color: rgba(245,245,247,0.7); margin-top: 1rem;">
+      Fans attending matches felt disconnected from their friends seated in different sections and lacked engaging ways to interact during the game.
+    </p>
+    <div class="grid-2" style="margin-top: 2rem;">
+      <div class="card">
+        <h3>Pain Point 1</h3>
+        <p style="color: rgba(245,245,247,0.7); line-height: 1.8;">Friends sitting in different sections couldn't easily communicate or share the live experience together.</p>
+      </div>
+      <div class="card">
+        <h3>Pain Point 2</h3>
+        <p style="color: rgba(245,245,247,0.7); line-height: 1.8;">No way to express reactions or emotions to exciting game moments with fellow fans.</p>
+      </div>
+      <div class="card">
+        <h3>Pain Point 3</h3>
+        <p style="color: rgba(245,245,247,0.7); line-height: 1.8;">Limited social engagement beyond passive spectating reduced overall stadium experience value.</p>
+      </div>
+      <div class="card">
+        <h3>Pain Point 4</h3>
+        <p style="color: rgba(245,245,247,0.7); line-height: 1.8;">Difficulty finding and connecting with friends at the stadium before and after the match.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <h2>User Research</h2>
+    <div class="grid-2" style="margin-top: 2rem;">
+      <div class="card">
+        <h3>Research Methods</h3>
+        <ul style="margin-top: 1rem; padding-left: 1.5rem; line-height: 1.8; color: rgba(245,245,247,0.7);">
+          <li>20 in-stadium fan interviews</li>
+          <li>Survey of 300+ season ticket holders</li>
+          <li>3 contextual observation sessions</li>
+          <li>Competitive analysis of 10 sports apps</li>
+          <li>Social media behavior analysis</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Key Insights</h3>
+        <ul style="margin-top: 1rem; padding-left: 1.5rem; line-height: 1.8; color: rgba(245,245,247,0.7);">
+          <li>85% wanted to chat with friends during games</li>
+          <li>72% would engage with live reactions</li>
+          <li>Fans missed key moments while texting</li>
+          <li>Predictions/betting heightened engagement</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section case-section-alt">
+    <h2>Key Features Designed</h2>
+    <div class="grid-2" style="margin-top: 2rem;">
+      <div class="card">
+        <h3>💬 Live Stadium Chat</h3>
+        <p style="margin-top: 1rem; line-height: 1.8; color: rgba(245,245,247,0.7);">Real-time group chat with friends at the stadium, synced with game events.</p>
+      </div>
+      <div class="card">
+        <h3>🎭 Quick Reactions</h3>
+        <p style="margin-top: 1rem; line-height: 1.8; color: rgba(245,245,247,0.7);">Tap to send instant emoji reactions to goals, saves, and exciting moments.</p>
+      </div>
+      <div class="card">
+        <h3>🎯 Match Predictions</h3>
+        <p style="margin-top: 1rem; line-height: 1.8; color: rgba(245,245,247,0.7);">Predict scores and outcomes, compete with friends on leaderboards.</p>
+      </div>
+      <div class="card">
+        <h3>👥 Friend Finder</h3>
+        <p style="margin-top: 1rem; line-height: 1.8; color: rgba(245,245,247,0.7);">See which friends are at the stadium and easily coordinate meetups.</p>
+      </div>
+      <div class="card">
+        <h3>🎉 Goal Celebrations</h3>
+        <p style="margin-top: 1rem; line-height: 1.8; color: rgba(245,245,247,0.7);">Immersive full-screen celebrations when your team scores.</p>
+      </div>
+      <div class="card">
+        <h3>📊 Live Stats Integration</h3>
+        <p style="margin-top: 1rem; line-height: 1.8; color: rgba(245,245,247,0.7);">Access real-time game statistics without leaving the social view.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <h2>Design Process</h2>
+    <div style="max-width: 800px; margin: 2rem auto;">
+      <div class="card" style="margin-bottom: 1.5rem;">
+        <h3>1. Stadium Entry Experience</h3>
+        <p style="margin-top: 1rem; line-height: 1.8; color: rgba(245,245,247,0.7);">Designed seamless check-in flow that automatically activates social features upon stadium entry.</p>
+      </div>
+      <div class="card" style="margin-bottom: 1.5rem;">
+        <h3>2. Immersive Match View</h3>
+        <p style="margin-top: 1rem; line-height: 1.8; color: rgba(245,245,247,0.7);">Created an AR-like view showing game stats overlay without blocking the live action.</p>
+      </div>
+      <div class="card" style="margin-bottom: 1.5rem;">
+        <h3>3. Chat & Reactions</h3>
+        <p style="margin-top: 1rem; line-height: 1.8; color: rgba(245,245,247,0.7);">Designed quick-access chat panel with one-tap reactions for instant engagement.</p>
+      </div>
+      <div class="card">
+        <h3>4. Social Integration</h3>
+        <p style="margin-top: 1rem; line-height: 1.8; color: rgba(245,245,247,0.7);">Built friend invitation system and prediction leaderboards to drive virality.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section case-section-alt">
+    <h2>Impact & Results</h2>
+    <div class="grid-2" style="margin-top: 2rem;">
+      <div class="card" style="text-align: center; padding: 3rem 2rem;">
+        <div style="font-size: 3rem; font-weight: 700; background: linear-gradient(to right, #3b82f6, #a855f7); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">70%</div>
+        <p style="margin-top: 0.5rem; font-size: 1.125rem; color: rgba(245,245,247,0.7);">In-Stadium Engagement Increase</p>
+      </div>
+      <div class="card" style="text-align: center; padding: 3rem 2rem;">
+        <div style="font-size: 3rem; font-weight: 700; background: linear-gradient(to right, #3b82f6, #a855f7); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">4.9★</div>
+        <p style="margin-top: 0.5rem; font-size: 1.125rem; color: rgba(245,245,247,0.7);">Feature Rating</p>
+      </div>
+      <div class="card" style="text-align: center; padding: 3rem 2rem;">
+        <div style="font-size: 3rem; font-weight: 700; background: linear-gradient(to right, #3b82f6, #a855f7); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">2M+</div>
+        <p style="margin-top: 0.5rem; font-size: 1.125rem; color: rgba(245,245,247,0.7);">Messages Sent Per Match</p>
+      </div>
+      <div class="card" style="text-align: center; padding: 3rem 2rem;">
+        <div style="font-size: 3rem; font-weight: 700; background: linear-gradient(to right, #3b82f6, #a855f7); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">45%</div>
+        <p style="margin-top: 0.5rem; font-size: 1.125rem; color: rgba(245,245,247,0.7);">Increase in Friend Invites</p>
+      </div>
+    </div>
+  </section>
+
+  <footer style="padding: 3rem 1.5rem; border-top: 1px solid rgba(255,255,255,0.1); text-align: center;">
+    <a href="../index.html" style="display: inline-block; padding: 1rem 2rem; background: linear-gradient(to right, #3b82f6, #a855f7); color: white; border-radius: 9999px; text-decoration: none; font-weight: 600;">
+      View More Projects
+    </a>
+    <p style="margin-top: 2rem; color: rgba(245,245,247,0.6);">© 2026 DARLA. All rights reserved.</p>
+  </footer>
+
+  <script>
+    window.addEventListener('scroll', () => {
+      const progress = document.querySelector('.case-progress');
+      const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (window.scrollY / windowHeight) * 100;
+      progress.style.width = scrolled + '%';
+    });
+  </script>
+</body>
+</html>
